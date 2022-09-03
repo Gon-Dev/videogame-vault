@@ -17,9 +17,9 @@ Hmmm, suuuure little voice in my head. Allright, let's have some fun. Now, serio
 "RAWG is the largest video game database and game discovery service." As it's said in the API docs. It don't have a fancy authentication, it's pretty straightforward. Ideal for a begginer like me, it simplifies everything and lets me to focus on other thigs as ui design, routing, basic ux. It, unfortunatelly, simplifies too some of the data I wanted to have, as game covers. But, as I said before it's ideal for now.
 
 Documentation links and more information:
-RAWG search engine: https://rawg.io/
-RAWG API main page: https://rawg.io/apidocs
-RAWG API docs: https://api.rawg.io/docs/
+- RAWG search engine: https://rawg.io/
+- RAWG API main page: https://rawg.io/apidocs
+- RAWG API docs: https://api.rawg.io/docs/
 
 # Legal Disclaimer
 
