@@ -1,0 +1,21 @@
+.list-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 0rem 1rem;
+}
+.list-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  list-style: none;
+  text-decoration: none;
+  background-color: #8a8a8a;
+  border-radius: 5px;
+}
+.list-item-link { 
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none; 
+  color: inherit;
+}

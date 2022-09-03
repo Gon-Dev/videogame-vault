@@ -1,0 +1,29 @@
+@media (max-width: 425px) {
+  .nav-link-text { display: none; }
+  .nav-wrapper {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    padding: 1rem 2rem;
+  }
+  .nav-icon { width: 2rem; }
+}
+@media (max-width: 1440px) and (orientation: landscape) {
+  .nav-icon { width: 2rem; }
+  .nav-wrapper{padding: 1rem;}
+}
+.nav-wrapper {
+  border: red 1px solid;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
