@@ -5,13 +5,8 @@ import parseDescriptionText from "../services/parseDescriptionText.js"
 import "../stylesheets/Game.css";
 import handleMoreClick from "../services/handlers.js"
 function Game( ) {
-  const [fetchedGame,setFetchedGame] = useState(null);
-  useEffect( ()=> {
-    console.log(fetchedGame);
-  },[fetchedGame]);
-  
+  const [fetchedGame,setFetchedGame] = useState(null);  
   const [gameID,setGameID] = useState(useParams());
-
   async function fetchGame() {
     const id = gameID.id;
     const gameData = await fetchSingleGame(id); // armar un fetchSingleGame y reemplazar fetchGameList
@@ -19,7 +14,7 @@ function Game( ) {
   }
   useEffect(()=>{ fetchGame() },[gameID]);
   if (fetchedGame) {
-    const {name,genres,platforms,metacritic,background_image, description , esrb_rating , developers} = fetchedGame;
+    const { name,genres,metacritic,background_image,description,esrb_rating,developers } = fetchedGame;
     const descriptionToShow = parseDescriptionText(description);
     const genresToShow = genres ? genres.map(genre => genre.name).join(" - ") : "No data available";
     const developersToShow = developers ? developers.map( developer => developer.name).join(" - ") : "No data available";
@@ -49,7 +44,7 @@ function Game( ) {
       </main>
     )
   }
-  return <></>
+  return <> <h1>LOADING</h1> </>
 
 }
 

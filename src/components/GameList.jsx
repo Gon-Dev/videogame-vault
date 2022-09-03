@@ -11,7 +11,7 @@ function GameList( {gamesResultsArray} ) {
       return (
         <li className="list-item" key={gameName}>
           <img className="list-item-image" src={image} alt="" />
-          <section>
+          <section className="list-item-data-wrapper">
             <p className="list-item-overline">{genres}</p>
             <Link className="list-item-link" to={`/game/${game.id}`}>{gameName}</Link>
             <p className="list-item-platforms">{platforms}</p>
