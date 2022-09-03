@@ -2,6 +2,7 @@
   background-color: var(--dark-green);
   color: var(--azureish-white);
   padding-bottom: 4rem;
+  height: 100vh;
 }
 
 @media (max-width: 425px) {

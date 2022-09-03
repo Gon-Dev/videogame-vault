@@ -28,17 +28,41 @@
   height: 15rem;
   object-fit: cover;
 }
+
 .game-description-wrapper { 
-  margin-top: 2rem; 
   display: flex;
   flex-direction: column;
   text-align: justify;
 }
-.game-description-more { 
+.game-description {
+  max-height: 5.8rem;
+  overflow: hidden;
+  transition: all ease-in-out 0.3s;
+}
+.game-user-button-icon {
+  width: 1.2rem;
+}
+.game-description-more,.game-user-button { 
   width: 7rem;
   height: 2rem;
-  margin-left: auto;
   background-color: var(--celadon-green);
   border: none;
-
+}
+.game-user-button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.game-user-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1rem;
+  padding: 3rem 1rem;
+  margin-bottom: 2rem;
+}
+.game-description-more {
+  margin-left: auto;
 }
