@@ -5,11 +5,17 @@ function GameList( {gamesResultsArray} ) {
     const searchResults = gamesResultsArray.map( game => {
       const gameName = game.name;
       const platforms = game.platforms.map( game => game.platform.name).join(" - ");
-      console.log(platforms);
+      const genres = game.genres.map (genre => genre.name).join(" - ");
+      const image = game.background_image;
+      // console.log();
       return (
         <li className="list-item" key={gameName}>
-          <Link className="list-item-link" to={`/game/${game.id}`}>{gameName}</Link>
-          {platforms}
+          <img className="list-item-image" src={image} alt="" />
+          <section>
+            <p className="list-item-overline">{genres}</p>
+            <Link className="list-item-link" to={`/game/${game.id}`}>{gameName}</Link>
+            <p className="list-item-platforms">{platforms}</p>
+          </section>
         </li>
       )
     });

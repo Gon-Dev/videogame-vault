@@ -13,10 +13,11 @@
   .nav-wrapper{padding: 1rem;}
 }
 .nav-wrapper {
-  border: red 1px solid;
   display: flex;
   justify-content: space-between;
+  flex-direction: row-reverse;
   gap: 1rem;
+  background-color: var(--dark-green);
 }
 .nav-link {
   display: flex;

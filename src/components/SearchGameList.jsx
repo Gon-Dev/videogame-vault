@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import fetchGameList from '../services/fetchGameList.js'
 import GameList from './GameList.jsx'
 import '../stylesheets/SearchGameList.css'
+import search from '../assets/search.svg'
 function SearchGameList() {
   const [gameNameInput,setGameNameInput] = useState("");
   const [listGameData, setListGameData] = useState(null);
@@ -25,15 +26,18 @@ function SearchGameList() {
   }
 
   return (
-    <section className="search-wrapper">
-      <h2 className="search-title">Let's search your next favourite game</h2>
-      <form className="search-input-wrapper">
-        <input className="search-input" type="text" onChange={handleInputChange}/>
-        <button className="search-submit" type="submit" onClick={searchByList}>SEARCH</button>
-      </form>
+    <main className="game-list-main-wrapper">
+      <section className="search-wrapper">
+        <h5 className="search-title">Game search</h5>
+        <form className="search-input-wrapper">
+          <input className="search-input" type="text" onChange={handleInputChange}/>
+          <button className="search-submit" type="submit" onClick={searchByList}>
+            <img className="search-button-icon" src={search} alt="" />
+          </button>
+        </form>
+      </section>
       { listGameData ? <GameList listGameData={listGameData} gamesResultsArray={gamesResultsArray}/> : null }
-      
-    </section>
+    </main>
   )
 }
 
