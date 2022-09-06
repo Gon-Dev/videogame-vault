@@ -1,0 +1,32 @@
+.game-gallery-wrapper { margin-top: 2.5rem; }
+.game-gallery-wrapper h6:first-child{ margin-top: 0px; }
+.game-gallery-slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+.game-gallery-slider::-webkit-scrollbar { display: none;}
+.game-screenshot {
+  width: 100%;
+  scroll-snap-align: start;
+}
+.game-gallery-left-button,.game-gallery-right-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2rem;
+  width: 2rem;
+  border: none;
+  position: sticky;
+  top:40%;
+  border-radius: 50%;
+  background-color: var(--celeste);
+  opacity: 0.5;
+  z-index: 0;
+}
+.game-gallery-left-button:active,.game-gallery-right-button:active { opacity: 1;}
+.game-gallery-left-button { left: 0.25rem; }
+.game-gallery-right-button { right: 0.25rem;}
+.arrow-icon {
+  width: 5rem;
+}

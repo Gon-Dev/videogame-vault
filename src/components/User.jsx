@@ -1,7 +1,13 @@
+import Beaten from "./Beaten";
+import Playing from "./Playing";
 function User() {
+
   return (
-    <h1>User</h1>
-  )
+    <main>
+      <Playing />
+      <Beaten />
+    </main>
+    )
 }
 
 export default User;

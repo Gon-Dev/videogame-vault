@@ -9,6 +9,14 @@ import About from './components/About.jsx';
 import SearchGameList from './components/SearchGameList';
 
 function App() {
+  // TODO: guardar
+    // data flow
+      // user busca juego
+      // user toca playingGame, el juego se guarda en localStorge('playing',[{gameObject},{gameObject}])
+      // user entra en Account -> renderea Playing
+      // Playing levanta locaLStorage on-render con useEffect ('playing',[{gameObject},{gameObject}]) y guarda en state local
+      // Playing mapea state local y renderea juegos
+      // IDEM para Beaten, Whishlist y Library pero mostrados de otra forma ponele
   return (
     <div className="App">
       <Navbar />

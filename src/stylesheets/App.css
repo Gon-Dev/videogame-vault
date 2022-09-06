@@ -1,3 +1,10 @@
+:root {
+  --dark-green:rgb(7, 34, 39, 1);
+  --celadon-green:rgb(53, 133, 139, 1);
+  --verdigris: rgb(79, 189, 186, 1);
+  --celeste: rgba(174, 254, 255, 1);
+  --azureish-white: rgba(213, 225, 245, 1);
+}
 * {
   margin: 0;
   box-sizing: border-box;
@@ -5,10 +12,6 @@
   scroll-behavior: smooth;
   color: var(--azureish-white);
 }
-:root {
-  --dark-green:rgb(7, 34, 39, 1);
-  --celadon-green:rgb(53, 133, 139, 1);
-  --verdigris: rgb(79, 189, 186, 1);
-  --celeste: rgba(174, 254, 255, 1);
-  --azureish-white: rgba(213, 225, 245, 1);
+body {
+  background-color: var(--dark-green);
 }

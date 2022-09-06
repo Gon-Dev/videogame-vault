@@ -5,6 +5,7 @@
     position: fixed;
     bottom: 0;
     padding: 1rem 2rem;
+    z-index: 1;
   }
   .nav-icon { width: 2rem; }
 }
