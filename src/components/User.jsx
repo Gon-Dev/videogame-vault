@@ -1,11 +1,12 @@
 import Beaten from "./Beaten";
 import Playing from "./Playing";
-function User() {
+function User( {myGames} ) {
+
 
   return (
     <main>
-      <Playing />
-      <Beaten />
+      <Playing myGames={myGames} />
+      <Beaten myGames={myGames} />
     </main>
     )
 }

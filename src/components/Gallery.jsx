@@ -1,7 +1,6 @@
-import {useState,useEffect} from 'react';
-import arrowRight from "../assets/arrow-right-material.svg";
-import arrowLeft from "../assets/arrow-left-material.svg";
+import {useState,useEffect, useRef} from 'react';
 import "../stylesheets/Gallery.css"
+import Slider from './Slider';
 function Gallery( {fetchedGame} ) {
   const [gallery,setGallery] = useState([]);
   async function fetchGallery(gameName) {
@@ -14,35 +13,13 @@ function Gallery( {fetchedGame} ) {
       console.log(error);;
     }
   }
-
-  function handleGalleryButton(event) {
-    const sliderElement = document.querySelector(".game-gallery-slider");
-    let actualPosition = sliderElement.scrollLeft;
-    let elementWidth = sliderElement.clientWidth;
-    event.currentTarget.className === "game-gallery-right-button"
-      ? sliderElement.scrollTo(actualPosition+elementWidth,0)
-      : sliderElement.scrollTo(actualPosition-elementWidth,0);
-  }
+  
   useEffect(()=>{ fetchedGame && fetchGallery(fetchedGame.slug) },[fetchedGame]);
-  const galleryToShow = gallery ? gallery.map( screen => {
-    return (
-      <img src={screen.image} key={screen.id} className="game-screenshot"/>
-    )
-  }) : <></>;
+
   return (
     <section className="game-gallery-wrapper">
       <h6 className="game-subtitle">GALLERY</h6>
-      <div className="game-gallery-slider">
-        <button className="game-gallery-left-button" onClick={handleGalleryButton}>
-          <img className="arrow-icon" src={arrowLeft} alt="arrow left icon" />
-        </button>
-        <>
-          {galleryToShow}
-        </>
-        <button className="game-gallery-right-button" onClick={handleGalleryButton}>
-          <img className="arrow-icon" src={arrowRight} alt="arrow right icon" />  
-        </button>
-      </div>
+      <Slider gallery={gallery}/>
     </section>
   )
 }
