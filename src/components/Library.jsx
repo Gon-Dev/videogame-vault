@@ -1,4 +1,5 @@
-import "../stylesheets/User.css";
+import { Link } from "react-router-dom";
+
 function Library( {myGames} ) {
 
   const gamesToShow = myGames ? myGames.library.map( game => {
@@ -23,7 +24,9 @@ function Library( {myGames} ) {
           {owned}
           {dropped}
         </aside>
-        {/* link con Router a detalle del juego */}
+        <button className="my-games-game-link-button">
+          <Link className="my-games-game-link" to={`/game/${game.id}`}>More . . .</Link>
+        </button>
       </li>
     )
   }) : "Nothing here!"

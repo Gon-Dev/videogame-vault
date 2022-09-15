@@ -1,8 +1,8 @@
-import "../stylesheets/User.css";
+import { Link } from "react-router-dom";
 function Beaten( {myGames} ) {
 
   const gamesToShow = myGames ? myGames.beaten.map( game => {
-    
+
     const beaten = game.added_by_status.dropped ? 
       <div>
         <h6>BEATEN BY</h6>
@@ -23,7 +23,9 @@ function Beaten( {myGames} ) {
           {beaten}
           {dropped}
         </aside>
-        {/* link con Router a detalle del juego */}
+        <button className="my-games-game-link-button">
+          <Link className="my-games-game-link" to={`/game/${game.id}`}>More . . .</Link>
+        </button>
       </li>
     )
   }) : "Nothing here!"

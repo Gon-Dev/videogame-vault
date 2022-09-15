@@ -30,7 +30,9 @@
   margin: 2rem 0rem;
 }
 .my-games-game-wrapper {
+  position: relative;
   width: 100%;
+  height: 8rem;
   box-shadow: 0px 0px 218px -21px rgba(0,0,0,0.5) inset;
   display: flex;
   justify-content: space-between;
@@ -60,4 +62,21 @@
 .my-games-game-wrapper h6,
 .my-games-game-wrapper p {
   text-shadow: 0px 0px 10px rgba(0,0,0,1);
+}
+.my-games-game-link {
+  text-decoration: none;
+  
+}
+.my-games-game-link-button {
+  
+  position: absolute;
+  right: -.5rem;
+  bottom: -.5rem;
+  background: var(--celadon-green);
+  border: none;
+  border: 1px solid var(--celadon-green);
+  border-radius: 5px;
+}
+.my-games-game-link-button:active {
+  background: var(--verdigris);
 }
