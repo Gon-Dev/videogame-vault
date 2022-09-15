@@ -2,7 +2,7 @@ import "../stylesheets/User.css";
 function Beaten( {myGames} ) {
 
   const gamesToShow = myGames ? myGames.beaten.map( game => {
-    console.log(game);
+    
     const beaten = game.added_by_status.dropped ? 
       <div>
         <h6>BEATEN BY</h6>
@@ -16,9 +16,10 @@ function Beaten( {myGames} ) {
     return(
       <li key={game.id} className="my-games-game-wrapper" style={{backgroundImage: `url(${game.background_image})`}}>
         
-        <h2>{game.name}</h2>
+        <h2 className="my-games-game-title">{game.name}</h2>
 
         <aside className="rawg-stats">
+          <h5>COMMUNITY STATS</h5>
           {beaten}
           {dropped}
         </aside>

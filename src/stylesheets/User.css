@@ -23,7 +23,7 @@
   border: 1px solid var(--celadon-green);
   border-radius: 5px;
 }
-.user-filter-button:focus {
+.button-active {
   background-color: var(--celadon-green);
 }
 .my-games-section-wrapper {
@@ -42,6 +42,9 @@
   background-repeat: no-repeat;
   border: solid 2px var(--verdigris);
   border-radius: 5px;
+}
+.my-games-game-title {
+  max-width: 50%;
 }
 .rawg-stats {
   display: flex;

@@ -1,33 +1,40 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import Library from "./Library.jsx";
 import Beaten from "./Beaten.jsx";
-import Library from "./Library.jsx"
-import Playing from "./Playing.jsx"
-import Wishlist from "./Wishlist.jsx"
-import "../stylesheets/User.css"
-import { useEffect } from "react";
-
+import Playing from "./Playing.jsx";
+import Wishlist from "./Wishlist.jsx";
+import { handleFilterButton } from "../services/handlers.js";
+import "../stylesheets/User.css";
 
 function User( {myGames} ) {
   
   const [activeSection,setActiveSection] = useState(null);
+
   const sections = [<Library myGames={myGames}/>, <Beaten myGames={myGames}/>, <Playing myGames={myGames}/>, <Wishlist myGames={myGames}/>];
 
   const sectionsSelect = sections.map( section => {
     return (
-      // <></>
       <button
         className={`user-filter-button`}
         type="button"
         key={section.type.name}
-        onClick={ () => setActiveSection(section.type.name)}
+        onClick={ event => {
+          setActiveSection(section.type.name)
+          handleFilterButton(event)
+        }}
       >
         {section.type.name.toLocaleUpperCase()}
       </button>
     )
-  })
-  const sectionToShow = sections.find( section => section.type.name === activeSection)
-  console.dir(activeSection);
-  // si la seccion clickeada matchea con el nombre del componente, retornar componente
+  });
+  let sectionToShow = sections.find( section => section.type.name === activeSection)
+  activeSection ? null : sectionToShow = sections[0];
+  useEffect( () => {
+    const buttons = document.querySelectorAll(".user-filter-button");
+    console.log(buttons);
+    buttons.forEach( button => button.classList.contains("button-active")) ? null : buttons[0].classList.add("button-active");
+  },[]);
+  
   return (
     <main className="user-main-wrapper">
       <h1 className="user-title">My games</h1>
@@ -35,9 +42,10 @@ function User( {myGames} ) {
         {sectionsSelect}
       </section>
       {sectionToShow}
-
     </main>
-    )
+  );
 }
+
+
 
 export default User;
