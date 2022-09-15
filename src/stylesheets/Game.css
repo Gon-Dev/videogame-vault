@@ -20,7 +20,9 @@
 }
 .game-subtitle {
   color: rgba(53, 133, 139,1);
-  margin: 1rem 0rem 0.25rem 0rem;
+  margin: 1.5rem 0rem 0.25rem 0rem;
+  font-size: 12px;
+  font-weight: 500;
 }
 .game-subtitle-data {
   font-weight: 400;
@@ -35,7 +37,7 @@
   display: flex;
   flex-direction: column;
   text-align: justify;
-  margin-top: 2.5rem;
+  margin-top: 4rem;
 }
 .game-description-wrapper h6:first-child { margin-top: 0px; }
 .game-description {
@@ -48,8 +50,12 @@
 .game-description-more,.game-user-button { 
   width: 7rem;
   height: 2rem;
-  background-color: var(--celadon-green);
+  background: none;
   border: none;
+  border: 1px solid var(--celadon-green);
+}
+.game-description-more:active {
+  background-color: var(--celadon-green);
 }
 .game-user-button {
   display: flex;
@@ -69,25 +75,30 @@
 .game-description-more {
   margin-left: auto;
   border-radius: 5px;
-  height: 1.5rem;
+  height: 2rem;
 }
 .game-account-first-wrapper {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   justify-content: space-around;
   gap: 1rem;
 }
-.game-account-first-wrapper button,.game-account-second-wrapper button {
+.game-account-first-wrapper button,
+.game-account-second-wrapper button {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 1.5rem;
+  height: 2rem;
   gap: 0.25rem;
-  background-color: var(--celadon-green);
-  border: none;
+  background: none;
+  border: 1px solid var(--celadon-green);
   border-radius: 5px;
+}
+.game-account-first-wrapper button:active,
+.game-account-second-wrapper button:active {
+  background-color: var(--celadon-green);
 }
 .game-account-second-wrapper {
   display: flex;

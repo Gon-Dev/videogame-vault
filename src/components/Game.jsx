@@ -98,7 +98,7 @@ function Game( {setMyGames} ) {
     const { name,genres,metacritic,background_image,description,esrb_rating,developers } = fetchedGame;
     const descriptionToShow = parseDescriptionText(description);
     const genresToShow = genres ? genres.map(genre => genre.name).join(" - ") : "No data available";
-    const developersToShow = developers ? developers.map( developer => developer.name).join(" - ") : "No data available";
+    const developersToShow = developers.length ? developers.map( developer => developer.name).join(" - ") : "No data available";
     const esrbToShow = esrb_rating ? 
     <>
       <h6 className="game-subtitle">ESRB RATING</h6>

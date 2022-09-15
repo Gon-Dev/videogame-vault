@@ -1,6 +1,5 @@
 import React, {useState,useEffect} from "react";
 function Playing( {myGames} ) {
-  console.log(myGames);
   const gamesToShow = myGames ? myGames.playing.map( game => {
     return(
       <p>{game.name}</p>

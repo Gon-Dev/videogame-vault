@@ -10,7 +10,9 @@ import './stylesheets/App.css'
 
 function App() {
 
-  const [myGames, setMyGames] = useState( localStorage.lenght ? JSON.parse(localStorage.getItem("myGames"))
+  let gamesInStorage = {...localStorage.myGames};
+  
+  const [myGames, setMyGames] = useState( Object.keys(gamesInStorage).length ? JSON.parse(localStorage.getItem("myGames"))
     : { 
       playing: [],
       beaten: [],
