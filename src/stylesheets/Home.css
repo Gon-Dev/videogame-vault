@@ -16,7 +16,7 @@
   margin-top: 2rem;
 }
 .summary-item {
-  width: 9rem;
+  width: 10rem;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -32,8 +32,11 @@
   width: 2.5rem;
   filter: var(--svg-filter-verdigris);
 }
+.summary-title {
+  font-size: 20px;
+}
 .summary-description {
-  font-size: 13px;
+  font-size: 15px;
 }
 .hero-wrapper {
   display: flex;
@@ -43,9 +46,10 @@
 }
 .hero-title {
   width: 80%;
-  margin-right: auto;
+
   line-height: 1.75rem;
   text-shadow: var(--text-light-shadow);
+  font-size: 30px;
 }
 .hero-button {
   width: 8rem;
@@ -54,7 +58,7 @@
   border: none;
   border: 1px solid var(--celadon-green);
   border-radius: 5px;
-  margin-left: auto;
+  margin: 0px 0rem 0px auto;
   background-color: rgb(53, 133, 139, .1);
   box-shadow: var(--box-light-shadow);
 }

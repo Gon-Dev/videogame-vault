@@ -6,15 +6,21 @@ import search from '../assets/search.svg'
 function SearchGameList() {
   const [gameNameInput,setGameNameInput] = useState("");
   const [listGameData, setListGameData] = useState(null);
+  const [isLoading,setIsLoading] = useState(false);
   const gamesResultsArray = listGameData ? listGameData.results : null;
 
   async function searchByList(event) {
     event.preventDefault();
     const inputElement = event.currentTarget.previousSibling;
     if (gameNameInput) {
+      setIsLoading(true);
+      setListGameData(null);
+      debugger;
       inputElement.classList.remove("invalid-input");
       const fetchedGames = await fetchGameList(gameNameInput);
+      setIsLoading(false);
       setListGameData(fetchedGames);
+
       return;
     } else if (!inputElement.innerText) {
       inputElement.classList.add("invalid-input")
@@ -36,7 +42,8 @@ function SearchGameList() {
           </button>
         </form>
       </section>
-      { listGameData ? <GameList listGameData={listGameData} gamesResultsArray={gamesResultsArray}/> : null }
+      { isLoading ? <h3 className="game-list-loading">LOADING. . .</h3> : <></>}
+      { listGameData ? <GameList listGameData={listGameData} gamesResultsArray={gamesResultsArray}/> : <></> }
     </main>
   )
 }

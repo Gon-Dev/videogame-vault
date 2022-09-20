@@ -16,7 +16,6 @@
   flex-direction: row;
   overflow-x: scroll;
   scroll-snap-type: x mandatory;
-
 }
 .slider-button {
   position: absolute;

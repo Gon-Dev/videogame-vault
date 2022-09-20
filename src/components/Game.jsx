@@ -93,7 +93,6 @@ function Game( {setMyGames} ) {
       }
     })    
   }
-
   if (fetchedGame) {
     const { name,genres,metacritic,background_image,description,esrb_rating,developers } = fetchedGame;
     const descriptionToShow = parseDescriptionText(description);
@@ -156,7 +155,7 @@ function Game( {setMyGames} ) {
       </main>
     )
   }
-  return <> <h1>LOADING</h1> </>
+  return <> <h3 className="game-loading">LOADING...</h3> </>
 
 }
 

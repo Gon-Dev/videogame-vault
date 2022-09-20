@@ -11,7 +11,7 @@ function Home() {
   return (
     <main className="home-main-wrapper">
       <img src={vgLogo} alt="asd" />
-      <p className="home-logo-subtitle">Store and keep track of your favourite games.</p>
+      <p className="home-logo-subtitle">Your place for videogame storing and tracking.</p>
       <section className="summary-wrapper">
         <div className="summary-item">
           <img className="summary-icon" src={crosshairsIcon} alt="crosshairs" />

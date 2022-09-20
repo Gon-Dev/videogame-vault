@@ -114,3 +114,9 @@
 .game-account-second-wrapper { margin-top: 2.5rem; }
 .game-account-whishlist,.game-account-library { width: 100%; }
 .game-account-star-icon { width: 1rem; filter: var(--svg-filter-azureish-white);}
+.game-loading {
+  text-align: center;
+  height: 100vh;
+  padding-top: 5rem;
+  font-size: 30px;
+}
