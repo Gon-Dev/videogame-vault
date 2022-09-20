@@ -6,6 +6,17 @@
 .slide {
   width: 100%;
   height: 100%;
+  scroll-snap-align: start;
+  object-position: center;
+  object-fit: cover;
+  box-shadow: var(--box-light-shadow);
+}
+.slides {
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+
 }
 .slider-button {
   position: absolute;

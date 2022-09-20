@@ -3,7 +3,9 @@ import { useState } from "react";
 import "../stylesheets/Slider.css";
 function Slider({ gallery } ) {
   const [currentIndex,setCurrentIndex] = useState(0);
-  const images = gallery.map( image => <img src={image.image} alt="game screenshot" className="slide"/>  )
+  
+  const images = gallery.map( image => <img className="slide" src={image.image} alt="game screenshot" key={image.id}/>  )
+
   function handleClick(event) {
     if(event.target.classList.contains("next")) {
       images[currentIndex + 1] ? setCurrentIndex(prevIndex => prevIndex + 1) : setCurrentIndex(0);

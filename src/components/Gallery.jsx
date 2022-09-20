@@ -1,6 +1,6 @@
 import {useState,useEffect, useRef} from 'react';
 import "../stylesheets/Gallery.css"
-import Slider from './Slider';
+import Slider from './Slider.jsx';
 function Gallery( {fetchedGame} ) {
   const [gallery,setGallery] = useState([]);
   async function fetchGallery(gameName) {

@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 function Wishlist( {myGames} ) {
 
   const gamesToShow = myGames ? myGames.wishlist.map( game => {
-    console.log(game);
+
     const owned = game.added_by_status.owned ? 
       <div>
         <h6>OWNED BY</h6>

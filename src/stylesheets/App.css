@@ -1,9 +1,13 @@
 :root {
-  --dark-green:rgb(7, 34, 39, 1);
-  --celadon-green:rgb(53, 133, 139, 1);
-  --verdigris: rgb(79, 189, 186, 1);
+  --dark-green:rgba(7, 34, 39, 1);
+  --celadon-green:rgba(53, 133, 139, 1);
+  --verdigris: rgba(79, 189, 186, 1);
   --celeste: rgba(174, 254, 255, 1);
   --azureish-white: rgba(213, 225, 245, 1);
+  --svg-filter-verdigris: invert(60%) sepia(29%) saturate(762%) hue-rotate(128deg) brightness(97%) contrast(87%);
+  --svg-filter-azureish-white: invert(99%) sepia(32%) saturate(1705%) hue-rotate(173deg) brightness(99%) contrast(92%);
+  --box-light-shadow: 0px 0px 5px rgba(0,0,0,0.2);
+  --text-light-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
 }
 * {
   margin: 0;
@@ -11,8 +15,14 @@
   font-family: 'Ubuntu', sans-serif;
   scroll-behavior: smooth;
   color: var(--azureish-white);
-  box-shadow: rgba(0,0,0,0.2);
+}
+#root {
+  min-height: 100%;
 }
 body {
+  min-height: 100%;
   background-color: var(--dark-green);
+}
+.App {
+  background-image: linear-gradient(to right top, #072227, #062c31, #04363a, #014043, #004b4b);
 }

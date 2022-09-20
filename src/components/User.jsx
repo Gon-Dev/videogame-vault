@@ -31,13 +31,12 @@ function User( {myGames} ) {
   activeSection ? null : sectionToShow = sections[0];
   useEffect( () => {
     const buttons = document.querySelectorAll(".user-filter-button");
-    console.log(buttons);
     buttons.forEach( button => button.classList.contains("button-active")) ? null : buttons[0].classList.add("button-active");
   },[]);
   
   return (
     <main className="user-main-wrapper">
-      <h1 className="user-title">My games</h1>
+      <h1 className="user-title">My vault</h1>
       <section className="user-filter-wrapper">
         {sectionsSelect}
       </section>
