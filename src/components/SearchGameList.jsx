@@ -15,7 +15,6 @@ function SearchGameList() {
     if (gameNameInput) {
       setIsLoading(true);
       setListGameData(null);
-      debugger;
       inputElement.classList.remove("invalid-input");
       const fetchedGames = await fetchGameList(gameNameInput);
       setIsLoading(false);
