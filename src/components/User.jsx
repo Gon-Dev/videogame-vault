@@ -12,21 +12,8 @@ function User( {myGames} ) {
 
   const sections = [<Library myGames={myGames}/>, <Beaten myGames={myGames}/>, <Playing myGames={myGames}/>, <Wishlist myGames={myGames}/>];
 
-  const sectionsSelect = sections.map( section => {
-    return (
-      <button
-        className={`user-filter-button`}
-        type="button"
-        key={section.type.name}
-        onClick={ event => {
-          setActiveSection(section.type.name)
-          handleFilterButton(event)
-        }}
-      >
-        {section.type.name.toLocaleUpperCase()}
-      </button>
-    )
-  });
+  console.log(activeSection);
+
   let sectionToShow = sections.find( section => section.type.name === activeSection)
   activeSection ? null : sectionToShow = sections[0];
   useEffect( () => {
@@ -38,7 +25,46 @@ function User( {myGames} ) {
     <main className="user-main-wrapper">
       <h1 className="user-title">My vault</h1>
       <section className="user-filter-wrapper">
-        {sectionsSelect}
+      <button
+        className={`user-filter-button`}
+        type="button"
+        key="library"
+        onClick={ event => {
+          setActiveSection("Library")
+          handleFilterButton(event)
+        }}>
+        LIBRARY        
+      </button>
+      <button
+        className={`user-filter-button`}
+        type="button"
+        key="beaten"
+        onClick={ event => {
+          setActiveSection("Beaten")
+          handleFilterButton(event)
+        }}>
+        BEATEN      
+      </button>
+      <button
+        className={`user-filter-button`}
+        type="button"
+        key="wishlist"
+        onClick={ event => {
+          setActiveSection("Wishlist")
+          handleFilterButton(event)
+        }}>
+        WISHLIST        
+      </button>
+      <button
+        className={`user-filter-button`}
+        type="button"
+        key="playing"
+        onClick={ event => {
+          setActiveSection("Playing")
+          handleFilterButton(event)
+        }}>
+        PLAYING        
+      </button>
       </section>
       {sectionToShow}
     </main>
