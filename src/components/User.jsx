@@ -12,8 +12,6 @@ function User( {myGames} ) {
 
   const sections = [<Library myGames={myGames}/>, <Beaten myGames={myGames}/>, <Playing myGames={myGames}/>, <Wishlist myGames={myGames}/>];
 
-  console.log(activeSection);
-
   let sectionToShow = sections.find( section => section.type.name === activeSection)
   activeSection ? null : sectionToShow = sections[0];
   useEffect( () => {
