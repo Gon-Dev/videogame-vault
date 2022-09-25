@@ -1,5 +1,4 @@
-import {useState,useEffect, useRef} from 'react';
-import "../stylesheets/Gallery.css"
+import {useState,useEffect } from 'react';
 import Slider from './Slider.jsx';
 function Gallery( {fetchedGame} ) {
   const [gallery,setGallery] = useState([]);

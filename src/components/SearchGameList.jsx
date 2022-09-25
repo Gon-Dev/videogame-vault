@@ -35,7 +35,7 @@ function SearchGameList() {
       <section className="search-wrapper">
         <h5 className="search-title">Game search</h5>
         <form className="search-input-wrapper">
-          <input className="search-input" type="text" onChange={handleInputChange}/>
+          <input className="search-input" type="text" autoFocus placeholder="Search" onChange={handleInputChange}/>
           <button className="search-submit" type="submit" onClick={searchByList}>
             <img className="search-button-icon" src={search} alt="" />
           </button>

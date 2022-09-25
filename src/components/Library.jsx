@@ -29,7 +29,7 @@ function Library( {myGames} ) {
         </button>
       </li>
     )
-  }) : "Nothing here!"
+  }) : <h1>"Nothing here!"</h1>
   
   return(
     <section className="my-games-section-wrapper">
