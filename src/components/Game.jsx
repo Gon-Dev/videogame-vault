@@ -118,7 +118,7 @@ function Game( {setMyGames} ) {
       <h5 className="game-subtitle-data">{metacritic}/100</h5>
     </>
     : <></>;
-    
+
     return (
       <main className="game-main-wrapper">
         <h1 className="game-name">{name}</h1>
@@ -153,7 +153,7 @@ function Game( {setMyGames} ) {
         </section>
         <section className="game-description-wrapper">
           <h6 className="game-subtitle">DESCRIPTION</h6>
-          <p className={`game-description ${isShowingAll ? "description-full" : "description-partial"}`}>{descriptionToShow}</p>
+          <p className={`game-description ${isShowingAll ? "description-full" : ""}`}>{descriptionToShow}</p>
           <br />
           <button className="game-description-more" onClick={() => setIsShowingAll(isShowingAll => !isShowingAll)}>READ MORE</button>
         </section>

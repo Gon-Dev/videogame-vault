@@ -40,12 +40,11 @@
 .game-description-wrapper h6:first-child { margin-top: 0px; }
 .game-description {
   overflow: hidden;
-}
-.description-partial {
-  max-height: 5.8rem;
+  max-height: 5rem;
+  transition: max-height 1s ease;
 }
 .description-full {
-  max-height: fit-content;
+  max-height: 30rem;
 }
 .game-user-button-icon { width: 1.2rem; }
 .game-description-more,.game-user-button { 
