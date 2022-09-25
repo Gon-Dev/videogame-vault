@@ -23,6 +23,7 @@ function SearchGameList() {
       return;
     } else if (!inputElement.innerText) {
       inputElement.classList.add("invalid-input")
+      setTimeout( () => inputElement.classList.remove("invalid-input"),2000)
     }
     return;
   }
