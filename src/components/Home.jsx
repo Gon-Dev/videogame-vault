@@ -25,6 +25,11 @@ function Home() {
             <h4 className="summary-title">Save</h4>
             <p className="summary-description">Save the game to your personal Vault and keep track of your most beloved experiences in gaming.</p>
           </div>
+          <div className="summary-item">
+            <img className="summary-icon" src={saveIcon} alt="save" />
+            <h4 className="summary-title">Keep Track</h4>
+            <p className="summary-description">Have the final form of a videogame library, everything in one place. We work to take care of you, lazy colegues!</p>
+          </div>
         </section>
         <section className="hero-wrapper">
           <h3 className="hero-title">You're one step ahead for storing stories</h3>
