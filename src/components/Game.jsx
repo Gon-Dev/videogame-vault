@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import fetchSingleGame from "../services/fetchSingleGame.js";
 import parseDescriptionText from "../services/parseDescriptionText.js"
 import Gallery from "./Gallery.jsx";
+import Carousel from "./Carousel.jsx";
 import starIcon from "../assets/star.svg"
 import "../stylesheets/Game.css";
 
@@ -157,7 +158,8 @@ function Game( {setMyGames} ) {
           <br />
           <button className="game-description-more" onClick={() => setIsShowingAll(isShowingAll => !isShowingAll)}>READ MORE</button>
         </section>
-        <Gallery fetchedGame={fetchedGame}/>
+        {/* <Gallery fetchedGame={fetchedGame}/> */}
+        <Carousel fetchedGame={fetchedGame} />
         <div className={`game-added-modal-wrapper ${isModalShow ? "" : "modal-hidden"}`}>
           GAME ADDED TO YOUR VAULT
         </div>
