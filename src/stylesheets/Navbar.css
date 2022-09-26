@@ -23,18 +23,63 @@
   .nav-icon {
     filter: var(--svg-filter-verdigris);
   }
-
+  .arrow-expand {
+    display: none;
+  }
 @media (max-width: 1440px) and (orientation: landscape) {
   .nav-icon { width: 2rem; }
   .nav-wrapper{
-    z-index: 10;
-    top: 0;
-    bottom: auto;
-    flex-direction: row;
-    justify-content: center;
-    gap: 5rem;
+    padding: 5rem 0 0 0;
+    margin: 0;
+    width: 9rem;
+    height: 100vh;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    transition: all ease-in-out 0.3s;
   }
-  
+  .nav-link {
+    align-items: center;
+    padding: .5rem 0rem .5rem 1rem;
+    width: 100%;
+  }
+  .nav-link:hover {
+    background-color: var(--celadon-green);
+  }
+  .nav-link-text {
+    display: flex;
+  }
+  .arrow-expand {
+    position: absolute;
+    display: flex;
+    height: 3rem;
+    width: 3rem;
+    top: 3rem;
+    left: 9rem;
+    padding: 0;
+    border: none;
+    border-radius: 0px 5px 5px 0px;
+    background-color: var(--dark-green);
+    cursor: pointer;
+    border: 1px solid var(--celadon-green);
+    border-left: none;
+  }
+  .arrow-expand:hover {
+    background-color: var(--celadon-green);
+  }
+  .navbar-collapsed{
+    transform: translateX(-9rem);
+  }
+  .arrow-expand-icon {
+    height: 100%;
+    filter: var(--svg-filter-verdigris);
+    transition: all ease-in-out 0.4s;
+  }
+  .arrow-expand-icon.arrow-collapsed {
+    transform: rotate(180deg);
+  }
 }
 
 

@@ -24,12 +24,12 @@
   border: none;
   border: 1px solid var(--celadon-green);
   border-radius: 5px;
-  background-color: rgb(53, 133, 139, .1);
+  background-color: var(--dark-green);
   box-shadow: var(--box-light-shadow);
 }
 .button-active:hover,
 .button-active {
-  background-color: var(--dark-green);
+  background-color: var(--celadon-green);
   font-weight: bold;
 }
 .my-games-section-wrapper {
@@ -98,15 +98,11 @@
     height: 3rem;
     font-size: 1.1rem;
   }
-  .user-filter-wrapper button:hover {
-    background-color: rgba(7, 34, 39, 0.3);
-  }
-  .user-filter-button.button-active:hover,
   .user-filter-button.button-active {
-    background-color: var(--dark-green);
+    background-color: var(--celadon-green);
     font-weight: bold;
   }
-  .button-active { transform: scale(95%);}
+  .button-active { transform: scale(90%);}
   .my-games-section-wrapper ul {
     margin-top: 3rem;
     display: flex;

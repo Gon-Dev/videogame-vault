@@ -6,42 +6,48 @@
   background-image: linear-gradient(to right bottom, #072227, #062c31, #04363a, #014043, #004b4b);
 }
 .search-wrapper { 
+  width: 100%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem;
+  padding: 1.5rem 0rem;
   margin: 0;
   gap: 1rem;
 }
 .search-title { 
   text-align: left; 
-  font-size: 20px;
+  font-size: 26px;
   text-shadow: var(--text-light-shadow);
 }
 .search-input-wrapper { 
+  width: 100%;
+  height: 3rem;
   display: flex;
-  flex-direction: row;
+  flex-direction: row-reverse;
   align-items: center;
-  background-color: rgba(213, 225, 245, 0.2);
+  justify-content: center;
+  background-color: var(--dark-green);
+  padding: 0rem 1rem;
+  gap: 1rem;
 }
-.search-button-icon { 
-  width: 1.5rem; 
-  margin-top: 3px;
-  filter: var(--svg-filter-verdigris);
-}
+
 .search-input { 
-  height: 2rem;
-  width: 10rem;
+  height: 100%;
+  width: 100%;
   border: none;
-  font-size: 14px;
+  font-size: 20px;
   background-color: transparent;
-  padding-left: 1rem;
   color: var(--azureish-white);
   caret-color: var(--azureish-white);
   transition: all ease-in-out 0.1s;
 }
-.search-input:focus {
+.search-button-icon { 
+  width: 2rem; 
+  filter: var(--svg-filter-verdigris);
+}
+.search-input:focus,
+.search-input:active {
   outline: none;
   color: var(--azureish-white);
   caret-color: var(--azureish-white);
@@ -51,10 +57,14 @@
   opacity: 0.6;
 }
 .search-submit {
-  padding: 0rem 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: none;
-  background-color: transparent;
-  height: 2rem;
+  height: 100%;
+  background-color: var(--dark-green);
+  height: 100%;
+
 }
 .search-submit:active {
   background-color: var(--dark-green);
@@ -69,34 +79,37 @@
 
 @media (max-width: 1440px) and (orientation: landscape) {
   .game-list-main-wrapper {
-    padding: 1rem;
+    padding: 3rem 1rem 1rem;
     
   }
   .search-wrapper {
+    width: 100%;
+    flex-direction: row;
     justify-content: center;
     padding: 0;
-    margin: 5rem 0 4rem;
     gap: 2rem;
+    margin: 0 0 3rem 0;
   }
-  .search-title { display: none; }
   .search-input-wrapper {
+    width: 50%;
     display: flex;
     justify-content: flex-start;
-  }
-  .search-input {
-    width: 30rem;
-    font-size: 1.2rem;
-    margin: 0;
-    padding: 0;
     height: 3rem;
   }
-
+  .search-input {
+    font-size: 1.2rem;
+    margin: 0;
+  }
+  .search-submit:hover {
+    cursor: pointer;
+    background-color: var(--celadon-green);
+  }
   .search-input:focus,
   .search-submit:active {
     background: none;
   }
   .search-submit {
-    border: none;
+    cursor: pointer;
   }
   .search-button-icon {
     margin: 0 .5rem;

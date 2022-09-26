@@ -44,7 +44,7 @@
   transition: max-height 1s ease;
 }
 .description-full {
-  max-height: 30rem;
+  max-height: 40rem;
 }
 .game-user-button-icon { width: 1.2rem; }
 .game-description-more,.game-user-button { 
@@ -57,6 +57,7 @@
 }
 .game-description-more:active {
   background-color: var(--celadon-green);
+  transform: scale(90%);
 }
 .game-user-button {
   display: flex;
