@@ -26,6 +26,9 @@
   .arrow-expand {
     display: none;
   }
+  .arrow-expand-icon {
+    display: none;
+  }
 @media (max-width: 1440px) and (orientation: landscape) {
   .nav-icon { width: 2rem; }
   .nav-wrapper{
@@ -73,6 +76,7 @@
     transform: translateX(-9rem);
   }
   .arrow-expand-icon {
+    display: initial;
     height: 100%;
     filter: var(--svg-filter-verdigris);
     transition: all ease-in-out 0.4s;

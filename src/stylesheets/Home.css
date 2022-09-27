@@ -137,7 +137,7 @@
   }
   .hero-button:active {
     transform: scale(95%);
-  }
+  } 
   .summary-wrapper {
     width: 50%;
     flex-wrap: nowrap;

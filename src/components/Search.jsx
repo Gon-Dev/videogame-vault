@@ -1,6 +1,6 @@
 import React, {useState} from "react";
-import fetchGameList from '../services/fetchGameList.js'
-import GameList from './GameList.jsx'
+import fetchGameList from '../../services/fetchGameList.js'
+import GameList from '../GameList.jsx'
 import '../stylesheets/SearchGameList.css'
 import search from '../assets/search.svg'
 function SearchGameList() {

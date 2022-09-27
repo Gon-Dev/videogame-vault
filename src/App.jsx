@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { Routes,Route } from 'react-router-dom';
-import Home from './components/Home.jsx';
+import Home from './components/home/Home.jsx';
 import User from './components/User.jsx';
 import Game from './components/Game.jsx';
 import Navbar from './components/Navbar.jsx';
 import About from './components/About.jsx';
-import SearchGameList from './components/SearchGameList';
+import Search from './components/search/Search';
 import './stylesheets/App.css'
 
 function App() {
@@ -30,7 +30,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />}/>
-        <Route path="/search" element={<SearchGameList />}/>
+        <Route path="/search" element={<Search />}/>
         <Route path="/game/:id" element={<Game setMyGames={setMyGames}/>}/>
         <Route path="/user" element={<User myGames={myGames} />}/>
         <Route path="/about" element={<About />}/>
