@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import '../stylesheets/GameList.css';
+import '../../stylesheets/GameList.css';
 function GameList( {gamesResultsArray} ) {
   if (gamesResultsArray) {
     const searchResults = gamesResultsArray.map( game => {
@@ -7,7 +7,6 @@ function GameList( {gamesResultsArray} ) {
       const platforms = game.platforms.map( game => game.platform.name).join(" - ");
       const genres = game.genres.map (genre => genre.name).join(" - ");
       const image = game.background_image;
-      // console.log();
       return (
         <li className="list-item" key={gameName}>
           <img className="list-item-image" src={image} alt="" />

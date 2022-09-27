@@ -3,8 +3,8 @@ import Library from "./Library.jsx";
 import Beaten from "./Beaten.jsx";
 import Playing from "./Playing.jsx";
 import Wishlist from "./Wishlist.jsx";
-import { handleFilterButton } from "../services/handlers.js";
-import "../stylesheets/User.css";
+import { handleFilterButton } from "../../services/handlers.js";
+import "../../stylesheets/User.css";
 
 function User( {myGames} ) {
   

@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import home from '../assets/home.svg'
-import search from '../assets/search.svg'
-import user from '../assets/account.svg'
-import expandArrow from '../assets/chevron-right.svg'
-import '../stylesheets/Navbar.css'
+import home from '../../assets/home.svg'
+import search from '../../assets/search.svg'
+import user from '../../assets/account.svg'
+import expandArrow from '../../assets/chevron-right.svg'
+import '../../stylesheets/Navbar.css'
 function Navbar() {
   const [isExpanded,setIsExpanded] = useState(false);
   return (

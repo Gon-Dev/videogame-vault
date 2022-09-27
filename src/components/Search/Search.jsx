@@ -1,8 +1,8 @@
 import React, {useState} from "react";
 import fetchGameList from '../../services/fetchGameList.js'
-import GameList from '../GameList.jsx'
-import '../stylesheets/SearchGameList.css'
-import search from '../assets/search.svg'
+import GameList from './GameList.jsx'
+import '../../stylesheets/Search.css'
+import search from '../../assets/search.svg'
 function SearchGameList() {
   const [gameNameInput,setGameNameInput] = useState("");
   const [listGameData, setListGameData] = useState(null);

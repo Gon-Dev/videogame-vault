@@ -1,9 +1,9 @@
 import { useEffect } from "react";
 import { useState } from "react";
 import CarouselItem from "./CarouselItem.jsx";
-import arrowRight from "../assets/menu-right.svg"
-import arrowLeft from "../assets/menu-left.svg"
-import "../stylesheets/Carousel.css";
+import arrowRight from "../../assets/menu-right.svg"
+import arrowLeft from "../../assets/menu-left.svg"
+import "../../stylesheets/Carousel.css";
 
 export default function Carousel( {fetchedGame} ) {
 
