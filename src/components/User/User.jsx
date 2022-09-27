@@ -5,11 +5,12 @@ import Playing from "./Playing.jsx";
 import Wishlist from "./Wishlist.jsx";
 import { handleFilterButton } from "../../services/handlers.js";
 import "../../stylesheets/User.css";
+import UserFilterButton from "./UserFilterButton.jsx";
 
 function User( {myGames} ) {
   
   const [activeSection,setActiveSection] = useState(null);
-
+  
   const sections = [<Library myGames={myGames}/>, <Beaten myGames={myGames}/>, <Playing myGames={myGames}/>, <Wishlist myGames={myGames}/>];
 
   let sectionToShow = sections.find( section => section.type.name === activeSection)
@@ -23,46 +24,22 @@ function User( {myGames} ) {
     <main className="user-main-wrapper">
       <h1 className="user-title">My vault</h1>
       <section className="user-filter-wrapper">
-      <button
-        className={`user-filter-button`}
-        type="button"
-        key="library"
-        onClick={ event => {
-          setActiveSection("Library")
-          handleFilterButton(event)
-        }}>
-        LIBRARY        
-      </button>
-      <button
-        className={`user-filter-button`}
-        type="button"
-        key="beaten"
-        onClick={ event => {
-          setActiveSection("Beaten")
-          handleFilterButton(event)
-        }}>
-        BEATEN      
-      </button>
-      <button
-        className={`user-filter-button`}
-        type="button"
-        key="wishlist"
-        onClick={ event => {
-          setActiveSection("Wishlist")
-          handleFilterButton(event)
-        }}>
-        WISHLIST        
-      </button>
-      <button
-        className={`user-filter-button`}
-        type="button"
-        key="playing"
-        onClick={ event => {
-          setActiveSection("Playing")
-          handleFilterButton(event)
-        }}>
-        PLAYING        
-      </button>
+        <UserFilterButton 
+          title="Library" 
+          setActiveSection={setActiveSection} 
+          handleFilterButton={handleFilterButton} />
+        <UserFilterButton 
+          title="Beaten" 
+          setActiveSection={setActiveSection} 
+          handleFilterButton={handleFilterButton} />
+        <UserFilterButton 
+          title="Wishlist" 
+          setActiveSection={setActiveSection} 
+          handleFilterButton={handleFilterButton} />
+        <UserFilterButton 
+          title="Playing" 
+          setActiveSection={setActiveSection} 
+          handleFilterButton={handleFilterButton} />
       </section>
       {sectionToShow}
     </main>
