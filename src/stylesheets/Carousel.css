@@ -53,7 +53,7 @@
     height: auto;
   }
   .carousel-button {
-    transform: translateY(0%);
+    transform: translateY(-100%);
     border-radius: 5px;
   }
   .carousel-button:hover {

@@ -132,6 +132,7 @@
   transition: opacity ease-in-out .2s;
 }
 .game-added-modal-wrapper.modal-hidden{ 
+  pointer-events: none;
   opacity: 0;
 }
 @media (max-width: 1440px) and (orientation: landscape) {
