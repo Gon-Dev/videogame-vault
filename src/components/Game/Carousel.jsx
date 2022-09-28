@@ -24,7 +24,6 @@ export default function Carousel( {fetchedGame} ) {
   
   useEffect(()=>{ fetchedGame && fetchGallery(fetchedGame.slug) },[fetchedGame]);
   const handleClick = (event) => {
-    console.log(event.target);
     event.target.classList.contains("next") && setCurrentSlide(currentSlide => currentSlide < gallery.length - 1 ? currentSlide + 1 : 0);
     event.target.classList.contains("prev") && setCurrentSlide(currentSlide => currentSlide !== 0 ? currentSlide - 1 : gallery.length - 1);
   }

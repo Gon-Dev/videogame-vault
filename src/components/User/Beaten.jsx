@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-function Beaten( {myGames} ) {
+import deleteIcon from "../../assets/delete.svg"
+function Beaten( {myGames,deleteGame} ) {
 
   const gamesToShow = myGames ? myGames.beaten.map( game => {
 
@@ -26,6 +27,18 @@ function Beaten( {myGames} ) {
         <button className="my-games-game-link-button">
           <Link className="my-games-game-link" to={`/game/${game.id}`}>More . . .</Link>
         </button>
+
+        <button 
+          className="my-games-game-delete-button"
+          onClick={() => deleteGame(game)} 
+        >
+          <img 
+            className="my-games-game-delete-icon" 
+            src={deleteIcon} 
+            alt="delete icon" 
+          />
+        </button>
+
       </li>
     )
   }) : "Nothing here!"

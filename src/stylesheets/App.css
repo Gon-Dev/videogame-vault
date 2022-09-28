@@ -4,8 +4,10 @@
   --verdigris: rgba(79, 189, 186, 1);
   --celeste: rgba(174, 254, 255, 1);
   --azureish-white: rgba(213, 225, 245, 1);
+  --soft-pink: #B05878;
   --svg-filter-verdigris: invert(60%) sepia(29%) saturate(762%) hue-rotate(128deg) brightness(97%) contrast(87%);
   --svg-filter-azureish-white: invert(99%) sepia(32%) saturate(1705%) hue-rotate(173deg) brightness(99%) contrast(92%);
+  --svg-filter-dark-green: invert(9%) sepia(8%) saturate(6235%) hue-rotate(147deg) brightness(99%) contrast(95%);
   --box-light-shadow: 0px 0px 5px rgba(0,0,0,0.2);
   --text-light-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
 }

@@ -2,7 +2,6 @@
   min-height: 100vh;
   height: 100%;
   color: var(--azureish-white);
-  padding-bottom: 4rem;
   background-image: linear-gradient(to right bottom, #072227, #062c31, #04363a, #014043, #004b4b);
 }
 .search-wrapper { 
@@ -70,7 +69,7 @@
   background-color: var(--dark-green);
 }
 .invalid-input {
-  background-color: #B05878;
+  background-color: var(--soft-pink);
 }
 .game-list-loading {
   text-align: center;
@@ -83,10 +82,13 @@
   }
   .search-wrapper {
     width: 100%;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     padding: 0;
     margin: 0 0 3rem 0;
+  }
+  .search-title {
+    font-size: 2rem;
   }
   .search-input-wrapper {
     width: 50%;
@@ -94,10 +96,15 @@
     flex-direction: row;
     height: 3rem;
     padding: 0 0 0 1rem;
+    border-radius: 5px 5px 5px 5px;
   }
   .search-input {
     font-size: 1.2rem;
     margin: 0;
+  }
+  .search-submit {
+    border-radius: 5px 5px 5px 5px;
+
   }
   .search-submit:hover {
     cursor: pointer;

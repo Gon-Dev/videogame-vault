@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-function Wishlist( {myGames} ) {
+import deleteIcon from "../../assets/delete.svg"
+function Wishlist( {myGames,deleteGame} ) {
 
   const gamesToShow = myGames ? myGames.wishlist.map( game => {
 
@@ -25,6 +26,16 @@ function Wishlist( {myGames} ) {
         </aside>
         <button className="my-games-game-link-button">
           <Link className="my-games-game-link" to={`/game/${game.id}`}>More . . .</Link>
+        </button>
+        <button 
+          className="my-games-game-delete-button"
+          onClick={() => deleteGame(game)} 
+        >
+          <img 
+            className="my-games-game-delete-icon" 
+            src={deleteIcon} 
+            alt="delete icon" 
+          />
         </button>
       </li>
     )

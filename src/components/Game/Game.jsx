@@ -154,12 +154,11 @@ function Game( {setMyGames} ) {
         <section className="game-description-wrapper">
           <h6 className="game-subtitle">DESCRIPTION</h6>
           <p className={`game-description ${isShowingAll ? "description-full" : ""}`}>{descriptionToShow}</p>
-          
           <button 
             className="game-description-more" 
             onClick={() => setIsShowingAll(isShowingAll => !isShowingAll)}
           >
-            {isShowingAll ? "SHOW LESS" : "READ MORE"}
+          {isShowingAll ? "SHOW LESS" : "READ MORE"}
           </button>
         </section>
         <Carousel fetchedGame={fetchedGame} />

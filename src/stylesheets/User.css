@@ -73,16 +73,37 @@
   text-shadow: 0px 0px 10px rgba(0,0,0,1);
 }
 .my-games-game-link { text-decoration: none; }
-.my-games-game-link-button {
+.my-games-game-link-button,
+.my-games-game-delete-button {
   position: absolute;
-  right: -.5rem;
-  bottom: -.5rem;
   background: var(--dark-green);
   border: none;
   border: 1px solid var(--celadon-green);
   border-radius: 5px;
 }
-.my-games-game-link-button:active { background: var(--verdigris); }
+.my-games-game-link-button {
+  right: -.5rem;
+  bottom: -.5rem;
+}
+.my-games-game-delete-button {
+  padding: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: -.75rem;
+  top: -.75rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-color: var(--celadon-green);
+  background-color: var(--dark-green);
+}
+.my-games-game-delete-icon {
+  width: 3rem;
+  filter: var(--svg-filter-azureish-white);
+}
+.my-games-game-link-button:active,
+.my-games-game-delete-button:active { background: var(--verdigris); }
+
 @media (max-width: 1440px) and (orientation: landscape) {
   .user-main-wrapper {
     height: 100%;
@@ -92,8 +113,6 @@
   .user-title { 
     text-align: center;
     font-size: 3rem;
-  }
-  .user-filter-wrapper {
   }
   .user-filter-wrapper button {
     cursor: pointer;
@@ -121,5 +140,10 @@
   .my-games-game-link-button:hover {
     cursor: pointer;
     background-color: var(--dark-green);
+  }
+  .my-games-game-delete-button:hover {
+    cursor: pointer;
+    background-color: #822900;
+    border-color: var(--azureish-white);
   }
 }

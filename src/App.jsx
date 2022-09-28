@@ -23,7 +23,7 @@ function App() {
   useEffect(()=>{
     localStorage.setItem("myGames",JSON.stringify(myGames))
   },[myGames])
-
+  
   return (
     <div className="App">
       <Navbar />
@@ -31,7 +31,7 @@ function App() {
         <Route path="/" element={<Home />}/>
         <Route path="/search" element={<Search />}/>
         <Route path="/game/:id" element={<Game setMyGames={setMyGames}/>}/>
-        <Route path="/user" element={<User myGames={myGames} />}/>
+        <Route path="/user" element={<User myGames={myGames} setMyGames={setMyGames}/>}/>
       </Routes>
     </div>
   )
