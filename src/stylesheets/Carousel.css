@@ -49,4 +49,13 @@
     width: 100%;
     height: auto;
   }
+  .carousel-button {
+    width: 4rem;
+    height: auto;
+  }
+  .carousel-button:hover {
+    background-color: var(--celadon-green);
+  }
+  .carousel-button.prev { left: 1rem; }
+  .carousel-button.next { right: 1rem; }
 }

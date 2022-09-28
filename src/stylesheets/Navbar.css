@@ -42,6 +42,7 @@
     justify-content: flex-start;
     align-items: center;
     transition: all ease-in-out 0.3s;
+    z-index: 30;
   }
   .nav-link {
     align-items: center;
@@ -68,6 +69,7 @@
     cursor: pointer;
     border: 1px solid var(--celadon-green);
     border-left: none;
+    z-index: 30;
   }
   .arrow-expand:hover {
     background-color: var(--celadon-green);

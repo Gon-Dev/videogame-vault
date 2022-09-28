@@ -93,6 +93,8 @@
     text-align: center;
     font-size: 3rem;
   }
+  .user-filter-wrapper {
+  }
   .user-filter-wrapper button {
     cursor: pointer;
     width: 10rem;

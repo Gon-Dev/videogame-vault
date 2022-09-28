@@ -17,7 +17,7 @@ function Home() {
   return (
     <main className="home-main-wrapper">
       <div className="home-vg-logo-wrapper">
-        <p className="logo-vg">vg</p>
+        <p className="logo-vg">Videogame</p>
         <p className="logo-vault">Vault</p>
         <p className="logo-powered">poweredBy</p>
         <p className="logo-rawg">RAWG</p>
